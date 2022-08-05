@@ -1,0 +1,114 @@
+/*=====================- BANNER PRINCIPAL HOME -===============================*/
+.contenedor-banner-principal{
+    background-image: url(../img/banner/banner.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+}
+    .nombre-organizacion{
+        display: flex;
+        height: 100vh;
+        min-height: 100vh;
+        width: auto;
+        justify-content: space-around;
+        padding: 10px 5% 10px;
+    }
+        .text-typing h1{
+            font-family: 'Roboto Mono', monospace;
+            color: #fff;
+            width: 395px;
+            animation: typing 1.5s steps(20),blink .5s infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 5px solid;
+            font-size: clamp(2.44rem, 2.38vw + 1.58rem, 3.75rem);
+            position: absolute;
+            display: flex;
+        }
+        @keyframes typing{
+            from{
+                width: 0;
+            }
+        }
+        @keyframes blink{
+            50%{
+                border-color: #3FAFAF;
+            }
+        }
+        .nombre-organizacion{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            font-family: 'Alfa Slab One', sans-serif;
+            font-size: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+        }
+            #nombre-Principal{
+                color: #fff;
+                -webkit-text-stroke: 0.5px #3FAFAF;
+            }
+            #apellido-principal{
+                color: #3FAFAF;
+                -webkit-text-stroke: 0.5px black;
+            }   
+            #apellido-secundario{
+                color: #fff;
+                font-family: 'Roboto Mono', monospace;
+                font-size: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+            }
+        .mouse{
+            display: flex;
+            width: 25px;
+            height: 50px;
+            border: 2.5px solid #3FAFAF;
+            border-radius: 20px;
+            margin: 0 50% 0 47%;
+            position: absolute;
+            bottom: 80px;
+            cursor: pointer;
+        }
+            .mouse-wheel{
+                display: block;
+                width: 15px;
+                height: 15px;
+                background-color: #fff;
+                border-radius: 90%;
+                margin: auto;
+                animation: mov-wheel 1s linear infinite;
+            }
+            @keyframes mov-wheel{
+                0%{
+                    opacity: 0;
+                    transform: translateY(-5rem);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateY(1rem);
+                }
+            }        
+        .foto-banner{
+            position: absolute;
+            right: 0;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            animation: difuminar 3s;
+            width:  calc(35% - 1rem);
+            place-items: center;
+            border-radius: solid;
+        }
+        .img-foto-banner{
+            margin: 50px;
+        }
+            @keyframes difuminar {
+                from {opacity: 0}
+                to {opacity: 1}
+            }
+            .img-foto-banner{
+                width: 70%;
+                height: auto;
+            }
